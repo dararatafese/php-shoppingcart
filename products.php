@@ -18,14 +18,11 @@
       // page header html
       include 'layout_head.php';
 
-      // get database connection
-      $database = new Database();
-      $db = $database->getConnection();
-
       // initialize objects
       $product = new Product($db);
       $product_image = new ProductImage($db);
       $cart_item = new CartItem($db);
+
 
       // to prevent undefined index notice
       $action = isset($_GET['action']) ? $_GET['action'] : "";
